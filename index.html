@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Developer Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body class="bg-slate-950 text-slate-100 antialiased">
+    <header class="bg-slate-900/70 backdrop-blur sticky top-0 z-10 border-b border-slate-800">
+      <nav class="mx-auto max-w-6xl px-6 py-4 flex items-center justify-between">
+        <h1 class="text-lg font-semibold">Alex Developer</h1>
+        <a href="#contact" class="text-sm font-medium text-cyan-300 hover:text-cyan-200">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="mx-auto max-w-6xl px-6 pt-20 pb-16">
+        <p class="inline-block rounded-full border border-cyan-400/40 px-3 py-1 text-xs uppercase tracking-wider text-cyan-300">Open to opportunities</p>
+        <h2 class="mt-6 text-4xl sm:text-5xl font-bold leading-tight">Building fast, accessible web experiences.</h2>
+        <p class="mt-4 max-w-2xl text-slate-300">I’m a full-stack developer focused on shipping reliable products with clean code, thoughtful design, and measurable impact.</p>
+      </section>
+
+      <section class="mx-auto max-w-6xl px-6 py-12" id="projects">
+        <div class="flex items-center justify-between gap-4 flex-wrap">
+          <h3 class="text-2xl font-semibold">Projects</h3>
+          <input id="project-filter" type="search" placeholder="Filter by name or tech..." class="w-full sm:w-80 rounded-md border border-slate-700 bg-slate-900 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-400" />
+        </div>
+        <div id="projects-grid" class="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3"></div>
+      </section>
+
+      <section class="mx-auto max-w-6xl px-6 py-12" id="skills">
+        <h3 class="text-2xl font-semibold">Skills</h3>
+        <div class="mt-6 space-y-4">
+          <div class="skill-item" data-level="90">
+            <div class="flex justify-between text-sm"><span>JavaScript</span><span>90%</span></div>
+            <div class="h-2 rounded bg-slate-800 mt-2"><div class="skill-bar h-full rounded bg-cyan-400" style="width: 0"></div></div>
+          </div>
+          <div class="skill-item" data-level="85">
+            <div class="flex justify-between text-sm"><span>HTML & CSS</span><span>85%</span></div>
+            <div class="h-2 rounded bg-slate-800 mt-2"><div class="skill-bar h-full rounded bg-cyan-400" style="width: 0"></div></div>
+          </div>
+          <div class="skill-item" data-level="80">
+            <div class="flex justify-between text-sm"><span>Node.js</span><span>80%</span></div>
+            <div class="h-2 rounded bg-slate-800 mt-2"><div class="skill-bar h-full rounded bg-cyan-400" style="width: 0"></div></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mx-auto max-w-3xl px-6 py-12" id="contact">
+        <h3 class="text-2xl font-semibold">Contact</h3>
+        <form id="contact-form" class="mt-6 space-y-4 rounded-xl border border-slate-800 bg-slate-900 p-6">
+          <div>
+            <label for="name" class="block text-sm font-medium">Name</label>
+            <input id="name" name="name" type="text" class="mt-1 w-full rounded-md border border-slate-700 bg-slate-950 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-400" />
+            <p class="mt-1 text-xs text-rose-300 hidden" data-error-for="name"></p>
+          </div>
+          <div>
+            <label for="email" class="block text-sm font-medium">Email</label>
+            <input id="email" name="email" type="email" class="mt-1 w-full rounded-md border border-slate-700 bg-slate-950 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-400" />
+            <p class="mt-1 text-xs text-rose-300 hidden" data-error-for="email"></p>
+          </div>
+          <div>
+            <label for="message" class="block text-sm font-medium">Message</label>
+            <textarea id="message" name="message" rows="4" class="mt-1 w-full rounded-md border border-slate-700 bg-slate-950 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-400"></textarea>
+            <p class="mt-1 text-xs text-rose-300 hidden" data-error-for="message"></p>
+          </div>
+          <button type="submit" class="rounded-md bg-cyan-400 px-4 py-2 font-semibold text-slate-950 hover:bg-cyan-300">Send message</button>
+          <p id="form-status" class="text-sm text-emerald-300 hidden"></p>
+        </form>
+      </section>
+    </main>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

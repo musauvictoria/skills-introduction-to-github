@@ -1,0 +1,15 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.project-card {
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+}
+
+.skill-bar {
+  transition: width 1s ease;
+}
